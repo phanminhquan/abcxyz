@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+
+    tools:context=".RestaurantActivity">
+
+    <!-- Main layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pureWhite"
+            android:orientation="vertical">
+
+            <!-- Banner -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/restaurant_banner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_sample_food" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/black_rgba" />
+
+                    <!-- Custom Button -->
+                    <LinearLayout
+                        android:id="@+id/linear_btn_restaurant_back1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12sp"
+                        android:layout_marginTop="12sp"
+                        android:background="@drawable/shape_border_box"
+                        android:gravity="center_vertical"
+                        android:hapticFeedbackEnabled="true"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:importantForAccessibility="no"
+                            android:padding="10sp"
+                            android:rotation="90"
+                            app:srcCompat="@drawable/icon_down_arrow"
+                            app:tint="@color/grey_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_btn_restaurant_search1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="12sp"
+                        android:layout_toStartOf="@+id/linear_btn_restaurant_share1"
+                        android:background="@drawable/shape_border_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:importantForAccessibility="no"
+                            android:padding="10sp"
+                            app:srcCompat="@drawable/icon_magnifying_glass"
+                            app:tint="@color/grey_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_btn_restaurant_share1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="12sp"
+                        android:layout_toStartOf="@+id/linear_btn_restaurant_info1"
+                        android:background="@drawable/shape_border_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:importantForAccessibility="no"
+                            android:padding="10sp"
+                            app:srcCompat="@drawable/icon_share"
+                            app:tint="@color/grey_5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_btn_restaurant_info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="12sp"
+                        android:background="@drawable/shape_border_box"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:importantForAccessibility="no"
+                            android:padding="10sp"
+                            app:srcCompat="@drawable/icon_info"
+                            app:tint="@color/grey_5" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12sp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/restaurant_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing=".03"
+                        android:text="Cháo bà bảy - Lạc Long Quân"
+                        android:textFontWeight="600"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/restaurant_detail1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, distinctio!"
+                        android:textColor="@color/grey_3"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_btn_restaurant_favorite1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_border_box"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:importantForAccessibility="no"
+                        android:padding="10sp"
+                        app:srcCompat="@drawable/icon_share"
+                        app:tint="@color/grey_5" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="8sp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:importantForAccessibility="no"
+                    app:srcCompat="@drawable/icon_location"
+                    app:tint="@color/primaryDarker" />
+
+                <TextView
+                    android:id="@+id/restaurant_location1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="262 Lạc Long Quân, Phường 5, Quận 11, Thành phố Hồ Chí Minh, Việt Nam"
+                    android:textColor="@color/grey_5"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Rating -->
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/restaurant_rating_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="20sp"
+                android:backgroundTint="@color/white"
+                android:outlineSpotShadowColor="@color/transparent"
+                app:cardCornerRadius="16sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12sp"
+                    android:paddingVertical="8sp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@drawable/icon_star_fill"
+                                app:tint="@color/yellow" />
+
+                            <TextView
+                                android:id="@+id/restaurant_rate_star_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4sp"
+                                android:text="4.3"
+                                android:textFontWeight="500"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4sp"
+                            android:text="Bình chọn"
+                            android:textColor="@color/grey_5"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:importantForAccessibility="no"
+                                android:padding="3sp"
+                                app:srcCompat="@drawable/icon_list_2"
+                                app:tint="@color/primaryDarker" />
+
+                            <TextView
+                                android:id="@+id/restaurant_rate_amount_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4sp"
+                                android:text="1k+"
+                                android:textFontWeight="500"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4sp"
+                            android:text="Đánh giá"
+                            android:textColor="@color/grey_5"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@drawable/icon_clock"
+                                app:tint="@color/primaryDarker" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4sp"
+                                android:text="15 phút"
+                                android:textFontWeight="500"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4sp"
+                            android:text="Giao hàng"
+                            android:textColor="@color/grey_5"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Coupon -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/restaurant_coupon_recycler_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/adapter_restaurant_coupon" />
+
+            <!-- Foods -->
+            <com.mtb.foodorderreview.components.ExpandableHeightGridView
+                android:id="@+id/restaurant_food_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="20sp"
+
+                android:verticalSpacing="12sp"
+                android:horizontalSpacing="12sp"
+
+                android:listSelector="@color/transparent"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                tools:listitem="@layout/adapter_restaurant_food" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating cart -->
+    <RelativeLayout
+        android:id="@+id/restaurant_cart_btn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:translationX="-12sp"
+        android:translationY="-12sp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/restaurant_cart_icon"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+
+
+            android:outlineSpotShadowColor="@color/transparent"
+            app:cardCornerRadius="999sp"
+
+
+            android:backgroundTint="@color/primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="12sp"
+                app:srcCompat="@drawable/icon_shopping_cart"
+                app:tint="@color/pureWhite" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Floating number -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+
+            android:layout_alignEnd="@+id/restaurant_cart_icon"
+            android:layout_alignParentTop="true"
+            android:translationZ="2sp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="20sp"
+                android:layout_height="0sp"
+                app:cardCornerRadius="999sp"
+                android:clipChildren="false"
+
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/restaurant_cart_quantity_text"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="500"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

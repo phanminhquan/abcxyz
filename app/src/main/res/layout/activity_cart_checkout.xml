@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/pureWhite"
+    tools:context=".CartCheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/grey_2"
+        android:background="@color/pureWhite"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20sp"
+            android:paddingVertical="12sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/cart_checkout_back_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/shape_border_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:padding="10sp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/icon_down_arrow"
+                    app:tint="@color/grey_5" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:textSize="20sp"
+                android:text="Giỏ hàng"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1sp"-->
+        <!--            android:background="@color/grey_2"-->
+        <!--            tools:ignore="SmallSp" />-->
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginTop="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20sp"
+                android:orientation="vertical">
+
+                <com.mtb.foodorderreview.components.ExpandableHeightListView
+                    android:id="@+id/cart_checkout_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/adapter_cart_food"
+                    android:divider="@color/transparent"
+                    android:listSelector="@color/transparent"
+                    android:dividerHeight="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="20sp"
+                android:layout_marginVertical="12sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Chi tiết"
+                    android:fontFamily="@font/svn_poppins_semibold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Tạm tính" />
+
+                    <TextView
+                        android:id="@+id/cart_checkout_subtotal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="12,000d" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Phí giao hàng" />
+
+                    <TextView
+                        android:id="@+id/cart_checkout_shipping_text"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="15,000d" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginBottom="4sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:text="Coupon" />
+
+                    <TextView
+                        android:id="@+id/cart_checkout_discount_text"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="-15,000d" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pureWhite"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/grey_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:paddingHorizontal="20sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:text="Tổng tiền"
+                android:fontFamily="@font/svn_poppins_semibold" />
+
+            <TextView
+                android:id="@+id/cart_checkout_total_text"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:text="12,000d" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_checkout_submit_btn"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0sp"
+
+            android:background="@drawable/shape_home_button_order_now"
+
+            android:paddingHorizontal="16sp"
+            android:paddingVertical="8sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginHorizontal="20sp"
+
+            android:outlineSpotShadowColor="@color/transparent"
+
+            android:text="Đặt ngay"
+            android:letterSpacing=".05"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/svn_poppins_semibold"
+            android:textSize="16sp"
+            android:maxLines="1" />
+    </LinearLayout>
+
+
+</LinearLayout>

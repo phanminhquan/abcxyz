@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20sp"
+
+    android:orientation="vertical"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/adapter_restaurant_rating_name_text"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:text="Tên người dùng" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/adapter_restaurant_rating_star_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:text="4" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/icon_star_fill"
+                app:tint="@color/yellow"
+                android:importantForAccessibility="no" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/adapter_restaurant_rating_description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8sp"
+        android:textColor="@color/grey_4"
+        android:textSize="14sp"
+        android:text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, distinctio!" />
+</LinearLayout>

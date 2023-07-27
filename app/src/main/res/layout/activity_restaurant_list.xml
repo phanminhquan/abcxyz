@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".RestaurantListActivity">
+
+    <!--  MainContent  -->
+    <ScrollView
+        android:id="@+id/restaurant_list_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/restaurant_list_navigation"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Content goes here -->
+
+            <!--            Item-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/restaurant_list_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/grey_2"
+                    android:dividerHeight="1sp"
+                    tools:listitem="@layout/adapter_restaurant_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  Navigation  -->
+    <LinearLayout
+        android:id="@+id/restaurant_list_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/grey_2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/pureWhite"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20sp"
+            android:paddingVertical="12sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/restaurant_list_back_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/shape_border_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:padding="10sp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/icon_down_arrow"
+                    app:tint="@color/grey_5" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/restaurant_list_header_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="20sp"
+                android:text="Nhà hàng"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/grey_2"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+</RelativeLayout>

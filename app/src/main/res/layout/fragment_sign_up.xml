@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_fragment1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignUpFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20sp"
+        android:orientation="vertical">
+
+        <!-- Component -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Số điện thoại" />
+
+            <EditText
+                android:id="@+id/sign_up_tel_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_input"
+                android:hint="Nhập số điện thoại"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_3"
+                android:textSize="16sp"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Tên đăng nhập" />
+
+            <EditText
+                android:id="@+id/sign_up_username_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColorHint="@color/grey_3"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_border_box"
+                android:hint="Nhập "
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Mật khẩu" />
+
+            <EditText
+                android:id="@+id/sign_up_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColorHint="@color/grey_3"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_border_box"
+                android:hint="Nhập mật khẩu"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Họ tên" />
+
+            <EditText
+                android:id="@+id/sign_up_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColorHint="@color/grey_3"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_border_box"
+                android:hint="Nhập "
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/sign_up_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColorHint="@color/grey_3"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_border_box"
+                android:hint="Nhập "
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/svn_poppins_medium"
+                android:textColor="@color/grey_4"
+                android:text="Địa chỉ" />
+
+            <EditText
+                android:id="@+id/sign_up_address_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="12sp"
+                android:paddingVertical="8sp"
+                android:textColorHint="@color/grey_3"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@drawable/shape_border_box"
+                android:hint="Nhập "
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_sign_up_response_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginTop="4sp"
+            android:gravity="center"
+            android:text="Số điện thoại không hợp lệ" />
+    </LinearLayout>
+
+</FrameLayout>

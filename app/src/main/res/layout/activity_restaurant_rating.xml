@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".RestaurantRatingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/grey_2"
+        android:background="@color/pureWhite"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/restaurant_rating_back_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:padding="10sp"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/icon_down_arrow"
+                    app:tint="@color/grey_5" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:textSize="16sp"
+                android:text="Đánh giá nhà hàng"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/grey_2"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingTop="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- User rating -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Stars -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/restaurant_rating_star_1_image"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/icon_star_fill"
+                        app:tint="@color/yellow"
+                        android:importantForAccessibility="no" />
+
+                    <ImageView
+                        android:id="@+id/restaurant_rating_star_2_image"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/grey_3"
+                        android:importantForAccessibility="no" />
+
+                    <ImageView
+                        android:id="@+id/restaurant_rating_star_3_image"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/grey_3"
+                        android:importantForAccessibility="no" />
+
+                    <ImageView
+                        android:id="@+id/restaurant_rating_star_4_image"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/grey_3"
+                        android:importantForAccessibility="no" />
+
+                    <ImageView
+                        android:id="@+id/restaurant_rating_star_5_image"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/grey_3"
+                        android:importantForAccessibility="no" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/restaurant_rating_note_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:lines="4"
+                    android:gravity="start"
+
+                    android:layout_marginHorizontal="20sp"
+                    android:textSize="16sp"
+                    android:hint="Nhận xét về nhà hàng"
+
+                    android:paddingHorizontal="8sp"
+                    android:paddingVertical="8sp"
+                    android:layout_marginTop="8sp"
+
+                    android:textColorHint="@color/grey_3"
+                    android:textColor="@color/black"
+
+                    android:background="@drawable/shape_border_box"
+
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20sp"
+                    android:paddingTop="8sp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/restaurant_rating_submit_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:minHeight="0sp"
+                        android:background="@drawable/shape_home_button_order_now"
+                        android:paddingHorizontal="16sp"
+                        android:paddingVertical="8sp"
+
+                        android:outlineSpotShadowColor="@color/transparent"
+                        android:text="Gửi đánh giá"
+                        android:letterSpacing=".05"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/svn_poppins_semibold"
+                        android:textSize="16sp"
+                        android:maxLines="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.mtb.foodorderreview.components.ExpandableHeightListView
+                android:id="@+id/restaurant_rating_listview"
+                android:layout_width="match_parent"
+                android:layout_height="289dp"
+
+                android:divider="@color/transparent"
+                android:dividerHeight="12sp"
+                android:listSelector="@color/transparent"
+                android:paddingTop="8sp"
+                tools:listitem="@layout/adapter_restaurant_rating" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

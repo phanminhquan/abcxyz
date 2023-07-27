@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <!--  MainContent  -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:layout_below="@+id/profile_navigation"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <!-- Content goes here -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20sp"
+            android:paddingTop="32sp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:translationZ="5sp"
+            android:background="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@color/pureWhite"
+                app:cardCornerRadius="999sp"
+                android:gravity="center_vertical"
+                android:translationX="-20sp"
+                android:translationY="-20sp"
+                android:translationZ="5sp"
+                android:layout_toEndOf="@+id/profile_avatar_cardview"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:padding="10sp"
+                    app:srcCompat="@drawable/icon_file_upload"
+                    app:tint="@color/grey_5" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_avatar_cardview"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="24sp">
+
+                <ImageView
+                    android:id="@+id/profile_avatar_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img_sample_user_avatar"
+                    android:importantForAccessibility="no" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/profile_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingHorizontal="20sp"
+                android:paddingBottom="20sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="ID người dùng" />
+
+                    <TextView
+                        android:id="@+id/profile_id_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập ID người dùng"
+                        android:text="1"
+                        android:importantForAutofill="no"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/grey_4"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="Tên đăng nhập" />
+
+                    <TextView
+                        android:id="@+id/profile_username_text"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập ID người dùng"
+                        android:text="Username"
+                        android:importantForAutofill="no"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/grey_4"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="Họ tên" />
+
+                    <EditText
+                        android:id="@+id/profile_name_inp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập Họ tên"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="Số điện thoại" />
+
+                    <EditText
+                        android:id="@+id/profile_tel_inp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập Số điện thoại"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="Email" />
+
+                    <EditText
+                        android:id="@+id/profile_email_inp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập Email"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/svn_poppins_medium"
+                        android:textColor="@color/grey_4"
+                        android:text="Địa chỉ" />
+
+                    <EditText
+                        android:id="@+id/profile_address_inp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4sp"
+                        android:background="@drawable/shape_input"
+                        android:hint="Nhập Địa chỉ"
+                        android:text="abc xyz abc xyz abc xyz abc xyz abc xyz abc xyz abc xyz abc xyz "
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:paddingHorizontal="12sp"
+                        android:paddingVertical="8sp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey_3"
+                        android:textSize="16sp"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pureWhite"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/grey_2"
+                tools:ignore="SmallSp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:layout_marginBottom="20sp"
+                android:layout_marginHorizontal="20sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/profile_save_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:minHeight="0sp"
+                    android:background="@drawable/shape_home_button_order_now"
+                    android:paddingHorizontal="16sp"
+                    android:paddingVertical="8sp"
+
+                    android:outlineSpotShadowColor="@color/transparent"
+                    android:text="Lưu"
+                    android:letterSpacing=".05"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/svn_poppins_semibold"
+                    android:textSize="16sp"
+                    android:maxLines="1" />
+
+                <View
+                    android:layout_width="12sp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/profile_logout_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:minHeight="0sp"
+                    android:background="@drawable/shape_border_box"
+                    android:paddingHorizontal="16sp"
+                    android:paddingVertical="8sp"
+
+                    android:outlineSpotShadowColor="@color/transparent"
+                    android:text="Đăng xuất"
+                    android:letterSpacing=".05"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_4"
+                    android:textSize="16sp"
+                    android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--  Navigation  -->
+    <LinearLayout
+        android:id="@+id/profile_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/grey_2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/pureWhite"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20sp"
+            android:paddingVertical="12sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profile_header_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:textSize="20sp"
+                android:text="Thông tin"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/grey_2"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+</RelativeLayout>
